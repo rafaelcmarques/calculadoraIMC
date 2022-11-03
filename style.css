@@ -27,6 +27,7 @@
 
 body {
   background: #040924;
+  overflow-y: hidden;
 }
 
 body,
