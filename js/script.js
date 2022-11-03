@@ -24,12 +24,19 @@ form.onsubmit = (event) => {
 
   const result = calculateIMC(weight, height)
   displayResultMessage(result)
+
+  resetInputValues()
 }
 
 function displayResultMessage(result) {
   const message = `Seu IMC é de ${result}`
   Modal.message.innerText = message
   Modal.open()
+}
+
+function resetInputValues() {
+  inputHeight.value = ""
+  inputWeight.value = ""
 }
 
 inputHeight.oninput = () => alertError.close()
